@@ -19,7 +19,7 @@
             <p>//入力された10進数の文字を2真数に変換して表示します。</p>
             <v-text-field v-model="num10" label="10進数を入力してください"></v-text-field>
             <v-btn v-on:click="convertToNum10()">変換</v-btn>
-            <p>{{ count }}</p>
+            <p>{{ error }}</p>
             <p>{{ num2 }}</p>
         </div>
     </div>
@@ -36,7 +36,7 @@ export default{
             userInputData2 : "",
             num10 : "",
             num2 : "",
-            count : ""
+            error : ""
         }
     },
     methods:{
@@ -49,14 +49,19 @@ export default{
         },
         convertToNum10(){
             if(this.num10 == ""){
-                this.num2 = "値が入力されていません";
-            }else{
-                this.num2 = "入力されました";
+                this.num2 = "";
+                this.error = "入力されていません";
+                return;
+            }
+            
+            var num = parseInt(this.num10);
+
+            if(!(num >= 0)){
+                this.num2 = "";
+                this.error = "数値を入力してください";
+                return;
             }
 
-            //TODO:整数以外の文字が入力された時の処理
-            
-            var num = Number(this.num10);
             var ans = 1;
             var amari = 0;
             var num2 = "";
@@ -66,6 +71,7 @@ export default{
                 num2 = num2 + String(amari);
                 num = ans;
             }
+            this.error = "";
             this.num2 = num2.split("").reverse().join("");
         }
     }
