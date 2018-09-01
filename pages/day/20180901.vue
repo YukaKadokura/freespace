@@ -16,11 +16,24 @@
             <p>{{ getUserInputData2() }}</p>
         </div>
         <div class="SubContent">
-            <p>//入力された10進数の文字を2真数に変換して表示します。</p>
-            <v-text-field v-model="num10" label="10進数を入力してください"></v-text-field>
+            <p>//入力された10進数の整数を2真数に変換して表示する。</p>
+            <v-flex xs12 sm6 md3>
+                <v-text-field v-model="num10" label="10進数を入力してください"></v-text-field>
+            </v-flex>
             <v-btn v-on:click="convertToNum10()">変換</v-btn>
             <p>{{ error }}</p>
             <p>{{ num2 }}</p>
+        </div>
+        <div class="SubContent">
+            <p>//NaNの判定をする</p>
+            <p>Number.isNaN(0)：{{ test1() }}</p>
+        </div>
+        <div class="SubContent">
+            <p>//入力された値が整数か判定する</p>
+            <v-flex xs12 sm6 md3>
+                <v-text-field v-model="inputStr"></v-text-field>
+            </v-flex>
+            <p>{{ isNumber() }}</p>
         </div>
     </div>
 </template>
@@ -36,7 +49,8 @@ export default{
             userInputData2 : "",
             num10 : "",
             num2 : "",
-            error : ""
+            error : "",
+            inputStr : ""
         }
     },
     methods:{
@@ -50,15 +64,21 @@ export default{
         convertToNum10(){
             if(this.num10 == ""){
                 this.num2 = "";
-                this.error = "入力されていません";
+                this.error = "入力されていません。";
                 return;
             }
             
-            var num = parseInt(this.num10);
+            var num = Number(this.num10);
 
             if(!(num >= 0)){
                 this.num2 = "";
-                this.error = "数値を入力してください";
+                this.error = "数値を入力してください。";
+                return;
+            }
+
+            if(!Number.isInteger(num)){
+                this.num2 = "";
+                this.error = "小数ではなく整数を入力してください。"
                 return;
             }
 
@@ -73,6 +93,15 @@ export default{
             }
             this.error = "";
             this.num2 = num2.split("").reverse().join("");
+        },
+        test1(){
+            return Number.isNaN(0);
+        },
+        isNumber(){
+            if(this.inputStr == ""){
+                return "";
+            }
+            return Number.isInteger(Number(this.inputStr));
         }
     }
 }
