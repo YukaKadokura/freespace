@@ -25,11 +25,11 @@
             <p>{{ num2 }}</p>
         </div>
         <div class="SubContent">
-            <p>//NaNの判定をする</p>
+            <p>//NaNの判定をする。</p>
             <p>Number.isNaN(0)：{{ test1() }}</p>
         </div>
         <div class="SubContent">
-            <p>//入力された値が整数か判定する</p>
+            <p>//入力された値が整数か判定する。</p>
             <v-flex xs12 sm6 md3>
                 <v-text-field v-model="inputStr"></v-text-field>
             </v-flex>
