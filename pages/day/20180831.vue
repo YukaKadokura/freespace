@@ -40,7 +40,6 @@ export default {
 <style>
 #content{
   padding: 20px;
-  
 }
 #content1{
   margin: 5px;
