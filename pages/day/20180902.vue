@@ -1,6 +1,5 @@
 <template>
     <div id="Content">
-        {{ data1 }}
         <h1>20180902</h1>
         <div class="SubContent">
             <p>//Web記事の見出しに使用可能な見出しタブ</p>
