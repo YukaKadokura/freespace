@@ -1,5 +1,5 @@
 <template>
-    <div id="content">
+    <div class="Content">
         <h1>20180831</h1>
         <div id="content1">
           <p>//送信ボタンを押すとアラートが出る</p>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style>
-#content{
+.Content{
   padding: 20px;
 }
 #content1{

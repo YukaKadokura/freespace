@@ -1,5 +1,5 @@
 <template>
-    <div id="MainContent">
+    <div class="Content">
         <h1>20180901</h1>
         <div class="SubContent">
             <p>//最初からテキストフィールドに文字が入っていて、入力した内容的が下に表示される。</p>
@@ -108,7 +108,7 @@ export default{
 </script>
 
 <style>
-#MainContent{
+.Content{
     padding:20px;
 }
 .SubContent{

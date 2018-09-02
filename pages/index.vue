@@ -1,7 +1,10 @@
 <template>
-  <div id="content">
+  <div class="MainContent">
     <h1>freespace</h1>
-    <div id="day">
+    <div class="Contents">
+      <v-btn small nuxt-link to="/reverselookup">Vueでやりたいこと逆引き</v-btn>
+    </div>
+    <div class="Contents">
       <v-btn small nuxt-link to="/day/20180902">20180902</v-btn>
       <v-btn small nuxt-link to="/day/20180901">20180901</v-btn>
       <v-btn small nuxt-link to="/day/20180831">20180831</v-btn>
@@ -10,10 +13,10 @@
 </template>
 
 <style>
-#content{
+.MainContent{
   padding: 20px;
 }
-#day{
+.Contents{
   margin: 5px;
 }
 </style>
