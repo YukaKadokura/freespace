@@ -11,6 +11,12 @@
                 <button class="button-test" v-bind:disabled="vbindtest">v-bindによるボタンの活性</button>
         </div>
         <div class="SubContent">
+            <p>//LINE風の吹き出し（<a href="https://saruwakakun.com/html-css/reference/speech-bubble">参考</a>）</p>
+            <div class="balloon">
+                <p>吹き出し</p>
+            </div>
+        </div>
+        <div class="SubContent">
             <p>//入力された2進数を10進数に変換して表示します。</p>
             <v-flex xs12 sm6 md3>
                 <v-text-field v-model="binaryNum" />
@@ -89,10 +95,31 @@ export default{
 .button-test{
     margin: 10px;
     padding: 15px;
-    border-radious: 5px;
+    border-radius: 5px;
     -webkit-border-radius: 5px;/* for Safari and Chrome 対応*/
     -moz-border-radius: 5px;/* for Firefox 対応*/
     color: #ffffff;
     background-color: #ff0000;
+}
+.balloon {
+ 	position: relative;
+	display: inline-block;
+ 	margin: 15px;
+	padding: 10px;
+	min-width: 200px;
+ 	max-width: 100%;
+ 	color: #000000;
+	font-size: 16px;
+	background: #1dcd00;
+    border-radius: 5px;
+}
+.balloon:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+ 	margin-top: -15px;
+	border: 15px solid transparent;
+	border-right: 30px solid #1dcd00;
 }
 </style>
