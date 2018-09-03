@@ -17,6 +17,13 @@
             </v-flex>
             <p>変換後の10進数：{{ decimalNumToBinaryNum() }}</p>
         </div>
+        <div class="SubContent">
+            <p>//入力された値が素数かチェックします。（ver1）</p>
+            <v-flex xs12 sm6 md3>
+                <v-text-field solo v-model="inputNum"/>
+            </v-flex>
+            <p>素数かどうか：{{ isPrimeNum() }}</p>
+        </div>
     </div>
 </template>
 
@@ -25,7 +32,8 @@ export default{
     data(){
         return{
             vbindtest : false,
-            binaryNum : ""
+            binaryNum : "",
+            inputNum: ""
         }
     },
     methods:{
@@ -46,6 +54,23 @@ export default{
                 count = count + Math.pow(2, i);
             }
             return count;
+        },
+        isPrimeNum(){
+            var input = Number(this.inputNum);
+            if(!(input >= 1)){
+                return "1以上の整数を入力して下さい。";
+            }
+            if(input != 2 && input%2 == 0){
+                return "素数ではありません。";
+            }
+
+            var half = input/2;
+            for(var i=2; i<half; i++){
+                if(input%i == 0){
+                    return "素数ではありません。"
+                }
+            }
+            return "素数です。";
         }
     }
 }
@@ -56,6 +81,7 @@ export default{
     padding: 20px;
 }
 .SubContent{
+    background-color: #f2f2f2;
     margin: 5px;
     padding: 20px;
     border: solid;
