@@ -8,7 +8,14 @@
                 </v-flex>
                 <p>Mastacheによるバインド：{{ vbindtest }}</p>
                 <button class="button-test">ただのボタン</button>
-                <button class="button-test" v-bind:disabled="vbindtest">v-bindによるボタンの非活性</button>
+                <button class="button-test" v-bind:disabled="vbindtest">v-bindによるボタンの活性</button>
+        </div>
+        <div class="SubContent">
+            <p>//入力された2進数を10進数に変換して表示します。</p>
+            <v-flex xs12 sm6 md3>
+                <v-text-field v-model="binaryNum" />
+            </v-flex>
+            <p>変換後の10進数：{{ decimalNumToBinaryNum() }}</p>
         </div>
     </div>
 </template>
@@ -17,7 +24,28 @@
 export default{
     data(){
         return{
-            vbindtest : false
+            vbindtest : false,
+            binaryNum : ""
+        }
+    },
+    methods:{
+        decimalNumToBinaryNum(){
+            if(this.binaryNum == null || this.binaryNum == ""){
+                return "入力されていません。";
+            }
+            var decimalNum = this.binaryNum.split("").reverse();
+            var count = 0;
+            for(var i=0; i<decimalNum.length; i++){
+                if(decimalNum[i] != 0 && decimalNum[i] != 1){
+                    return "2進数を入力してください";
+                }
+                if(decimalNum[i] == "0"){
+                    continue;
+                }
+                var num = Number(decimalNum[i]);
+                count = count + Math.pow(2, i);
+            }
+            return count;
         }
     }
 }
