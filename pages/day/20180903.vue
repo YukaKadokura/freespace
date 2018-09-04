@@ -82,7 +82,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 .MainContent{
     padding: 20px;
 }

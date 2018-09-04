@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .MainContent{
     padding:20px;
 }
