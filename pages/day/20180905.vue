@@ -4,7 +4,11 @@
         <div class="SubContent">
             <p>//テンプレートリテラルの検証です。</p>
             <p>//babelがきいてなくてできていない。</p>
-            {{ testForTemplateLiteral() }}
+            <p>{{ testForTemplateLiteral() }}</p>
+        </div>
+        <div class="SubContent">
+            <p>//コールバック関数の検証です。</p>
+            <p>{{ testForCallBack() }}</p>
         </div>
     </div>
 </template>
@@ -13,10 +17,22 @@
 export default{
     methods:{
         testForTemplateLiteral(){
-            //テンプレートリテラルの検証
             const NAME = "田中太郎";
             console.log('私の名前は${NAME}です。');
             return '私の名前は${NAME}です。';
+        },
+        testForCallBack(){
+            function call(callback){
+                console.log("受け取る方#call()");
+                callback();
+            }
+
+            var reseivedFunc = function(){
+                console.log("受け取られる方#reseivedFunc");
+            }
+
+            //実行
+            call(reseivedFunc);
         }
     }
 }
