@@ -27,8 +27,9 @@ export default{
                 callback();
             }
 
+            //引数に渡される関数がコールバック関数
             var reseivedFunc = function(){
-                console.log("受け取られる方#reseivedFunc");
+                console.log("受け取られる方#reseivedFunc()");
             }
 
             //実行
