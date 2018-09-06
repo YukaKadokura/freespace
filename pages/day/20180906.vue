@@ -15,7 +15,16 @@
                 <div class="BorderBox4">
                     135degのdiv
                 </div>
+                <div class="BorderBox5">
+                    20px,40pxのdiv
+                </div>
             </div>
+        </div>
+        <div class="SubContent">
+            <p>//擬似要素:beforeの検証です。</p>
+            <p class="giji1">擬似要素:before</p>
+            <p>//擬似要素:afterの検証です。</p>
+            <p class="giji2">擬似要素:after</p>
         </div> 
         <div class="SubContent">
             <p>//displayプロパティの検証です。</p>
@@ -141,5 +150,30 @@
     width:200px;
     height:200px;
     background:repeating-linear-gradient(135deg, #db7093, #db7093 10px, #088eb6 10px, #088eb6 20px)
+}
+.BorderBox5{
+    margin:5px;
+    width:200px;
+    height:200px;
+    background:repeating-linear-gradient(135deg, #db7093, #db7093 20px, #088eb6 20px, #088eb6 40px)
+}
+.giji1{
+    border:solid;
+    width: 200px;
+    display:flex;
+}
+.giji1:before{
+    content:"★";
+    position: absolute;
+    left: -1px;
+}
+.giji2{
+    border:solid;
+    width:200px;
+}
+.giji2:after{
+    content:"★";
+    position: absolute;
+    right: -1px;
 }
 </style>
