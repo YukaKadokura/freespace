@@ -36,6 +36,15 @@
                 <li>リスト5</li>
             </ul>
         </div>
+        <div class="SubContent">
+            <p>//よくある上部メニューを作成します。</p>
+            <ul class="menu5">
+                <li>商品紹介</li>
+                <li>よくある質問</li>
+                <li>会社概要</li>
+                <li>お問い合わせ</li>
+            </ul>
+        </div>      
     </div>
 </template>
 
@@ -65,5 +74,15 @@
 .menu4 li{
     display:none;
     border:solid;
+}
+.menu5 li{
+    display:inline-block;
+    margin:3px;
+    padding:10px;
+    background:#db7093;
+    font-weight:bold;
+    color:#ffffff;
+    border-radius:5px;
+    border-color:#ffffff;
 }
 </style>
