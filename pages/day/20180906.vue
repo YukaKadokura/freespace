@@ -21,6 +21,13 @@
             </div>
         </div>
         <div class="SubContent">
+            <p>//よくあるカードの作成</p>
+            <div class="card">
+                <div class="ue">カードの上部</div>
+                <div class="shita">カードの下部</div>
+            </div>
+        </div>
+        <div class="SubContent">
             <p>//擬似要素:beforeの検証です。</p>
             <p class="giji1">擬似要素:before</p>
             <p>//擬似要素:afterの検証です。</p>
@@ -156,6 +163,26 @@
     width:200px;
     height:200px;
     background:repeating-linear-gradient(135deg, #db7093, #db7093 20px, #088eb6 20px, #088eb6 40px)
+}
+.card{
+    padding:0;
+    font-weight:bold;
+    color:#ffffff;
+    text-align:center;
+}
+.ue{
+    padding:7px;
+    background:#088eb6;
+    width:200px;
+    height:40px;
+    margin-bottom:0;
+}
+.shita{
+    padding:7px;
+    background:#db7093;
+    width:200px;
+    height:160px;
+    margin-top:0;
 }
 .giji1{
     border:solid;
