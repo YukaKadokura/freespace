@@ -5,6 +5,7 @@
       <v-btn small nuxt-link to="/reverselookup">Vueでやりたいこと逆引き</v-btn>
     </div>
     <div class="Contents">
+      <v-btn small nuxt-link to="/day/20180907">20180907</v-btn>
       <v-btn small nuxt-link to="/day/20180906">20180906</v-btn>
       <v-btn small nuxt-link to="/day/20180905">20180905</v-btn>
       <v-btn small nuxt-link to="/day/20180904">20180904</v-btn>
