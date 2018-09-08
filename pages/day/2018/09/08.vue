@@ -20,7 +20,29 @@
         <h1 id="title">20180908</h1>
         <div class="main">
             <div class="sub">
-                <p>//</p>
+                <p>//文字の横ラインを揃えます。</p>
+                <div class="flex">
+                    <div>
+                        <p>//top</p>
+                        <span class="oya">あ<span class="top">いうえお</span></span>
+                    </div>
+                    <div>
+                        <p>//text-top</p>
+                        <span class="oya">あ<span class="texttop">いうえお</span></span>
+                    </div>
+                    <div>
+                        <p>//middle</p>
+                        <span class="oya">か<span class="middle">きくけこ</span></span>
+                    </div>
+                    <div>
+                        <p>//bottom</p>
+                        <span class="oya">さ<span class="bottom">しすせそ</span></span>
+                    </div>
+                    <div>
+                        <p>//baseline</p>
+                        <span class="oya">た<span class="baseline">ちつてと</span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -109,4 +131,42 @@ a {
     margin:5px;
     padding:5px;
 }
+
+.flex{
+    display:flex;
+}
+
+.flex div{
+    margin:5px;
+}
+
+.oya{
+    font-size:50px;
+}
+
+.top{
+    font-size:15px;
+    vertical-align:top;
+}
+
+.texttop{
+    font-size:15px;
+    vertical-align:text-top;
+}
+
+.middle{
+    font-size:15px;
+    vertical-align:middle;
+}
+
+.bottom{
+    font-size:15px;
+    vertical-align:bottom;
+}
+
+.baseline{
+    font-size:15px;
+    vertical-align:baseline;
+}
+
 </style>
