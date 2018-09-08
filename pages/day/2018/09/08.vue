@@ -1,7 +1,7 @@
 <template>
     <div class="content">
-        <h1 id="title">20180908</h1>
-        <div class="side">
+        <div class="header">
+            <div class="side">
             <label class="toggle" for="open">
                 MENU
             </label>
@@ -16,8 +16,11 @@
             </nav>
             </div>
         </div>
+        </div>
+        <h1 id="title">20180908</h1>
         <div class="main">
             <div class="sub">
+                <p>//</p>
             </div>
         </div>
     </div>
@@ -31,13 +34,20 @@ html{
 body{
     height:100%;
 }
+.header{
+    background:crimson;
+    height:80px;
+    margin:0;
+    padding:10px;
+}
 #title{
-    padding:20px;
+    padding:10px;
     color:white;
 }
 .content{
     background:tomato;
     height:100%;
+    color:white;
 }
 .side{
     margin:20px;
@@ -48,13 +58,14 @@ ul {
 }
  
 li {
-  list-style: none;
+  list-style:none;
+  font-weight:bold;
   padding:5px;
 }
  
 a {
-  text-decoration: none;
-  color: #fff;
+  text-decoration:none;
+  color:white;
 }
  
 #menu {
@@ -69,13 +80,11 @@ a {
 }
  
 .toggle {
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
-  color:white;
   font-weight:bold;
   border:solid;
   padding:5px;
-  margin:10px;
 }
  
 .toggle:hover {
@@ -92,7 +101,7 @@ a {
 }
 
 .main{
-    margin:20px;
+    margin:5px;
     padding:5px;
 }
 
