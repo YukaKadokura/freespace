@@ -7,7 +7,15 @@
         </div>
         <div class="content">
             <p class="midashi2">三角形です。</p>
-            <div class="triangle"></div>
+            <div class="flex">
+                <div class="triangle margin5"></div>
+                <div class="triangle2 margin5"></div>
+                <div class="triangle3 margin5"></div>
+                <div class="triangle4 margin5"></div>
+            </div>
+        </div>
+        <div class="content">
+            <p class="midashi3">見出し</p>
         </div>
     </div>
 </template>
@@ -42,11 +50,45 @@
     background:#c2edff;
     padding:10px;
 }
+.flex{
+    display:flex;
+}
+.margin5{
+    margin-right:5px;
+}
 .triangle{
     width:0;
     height:0;
     border-left:25px solid transparent;
     border-right:25px solid transparent;
     border-bottom:50px solid #81C7D4;
+}
+.triangle2{
+    width:0;
+    height:0;
+    border-bottom:25px solid transparent;
+    border-top:25px solid transparent;
+    border-right:50px solid #81C7D4;
+}
+.triangle3{
+    width:0;
+    height:0;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-left:50px solid #81c7d4;
+}
+.triangle4{
+    wigth:0;
+    height:0;
+    border-left:25px solid transparent;
+    border-right:25px solid transparent;
+    border-top:50px solid #81c7d4;
+}
+.midashi3{
+    color:#494949;
+    font-weight:bold;
+    background:transparent;
+    border-left:solid 5px #7db4e6;
+    padding:10px;
 }
 </style>
