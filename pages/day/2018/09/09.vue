@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="contents">
         <h1 class="title">20180909</h1>
         <div class="content">
             <p class="midashi">円です。</p>
@@ -21,7 +21,7 @@
 </template>
 
 <style scoped>
-.container{
+.contents{
     margin:10px;
     padding:20px;
 }
