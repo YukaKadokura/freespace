@@ -170,11 +170,12 @@ export default{
     padding:5px;
 }
 .list2{
-    background:lightblue;
+    background:#dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
     width:50%;
     padding:5px;
-    border:dashed 3px dodgerblue;
-    margin-top:10px;
+    border:dashed 2px dodgerblue;
+    margin-top:15px;
 }
 .list2 li{
     margin-left:25px;
