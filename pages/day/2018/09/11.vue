@@ -30,6 +30,19 @@
             </div>
             <div class="midashi10">見出し10</div>
         </div>
+        <div class="content">
+            <p class="midashi1">色々なリストです。</p>
+            <ul class="list1">
+                <li>リスト</li>
+                <li>リスト</li>
+                <li>リスト</li>
+            </ul>
+            <ul class="list2">
+                <li>リスト</li>
+                <li>リスト</li>
+                <li>リスト</li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -44,7 +57,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 .contents{
     margin:10px;
 }
@@ -145,5 +158,26 @@ export default{
     width:50%;
     font-weight:bold;
     margin-top:10px;
+}
+.list1{
+    background:powderblue;
+    width:50%;
+    padding:5px;
+    border:solid 2px grey;
+}
+.list1 li{
+    margin-left:25px;
+    padding:5px;
+}
+.list2{
+    background:lightblue;
+    width:50%;
+    padding:5px;
+    border:dashed 3px dodgerblue;
+    margin-top:10px;
+}
+.list2 li{
+    margin-left:25px;
+    padding:5px;
 }
 </style>
