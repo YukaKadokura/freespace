@@ -6,6 +6,11 @@
             <div class="box">
             </div>
         </div>
+        <div class="content2">
+            <h2>見出し</h2>
+            <div class="box">
+            </div>
+        </div>
     </div>
 </template>
 
@@ -48,5 +53,27 @@ export default{
 .content1 .box:hover{
     /* 変形後のスタイル */
     transform: translate(10px, 20px);
+}
+.content2{
+    margin-top:20px;
+}
+.content2 h2{
+    font-size:15px;
+    color:#454545;
+    background:#f5f6ce;
+    box-shadow:0 0 0 5px #f5f6ce;
+    border: dashed 2px orange;
+    width:50%;
+    padding:5px;
+    margin-bottom:20px;
+}
+.content2 .box{
+    width:40px;
+    height:40px;
+    background:blue;
+    cursor: pointer;
+}
+.content2 .box:hover{
+    transform: rotate(45deg);
 }
 </style>
