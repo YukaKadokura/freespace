@@ -12,9 +12,13 @@
             </div>
         </div>
         <div class="content3">
-            <h2>マウスオーバーすると2倍に拡大します。</h2>
+            <h2>マウスオーバーすると中心を起点に2倍に拡大します。</h2>
             <div class="box">
             </div>
+        </div>
+        <div class="content4">
+            <h2>マウスオーバーすると0.4sかけて回転し不透明度を変更します。</h2>
+            <div class="box"></div>
         </div>
     </div>
 </template>
@@ -104,5 +108,29 @@ export default{
 }
 .content3 .box:hover{
     transform: scale(2);
+}
+.content4{
+    margin-top:20px;
+}
+.content4 h2{
+    font-size:15px;
+    padding:5px;
+    color: #454545;
+    border-bottom:dashed 2px #454545;
+    width:50%;
+    margin-bottom:20px;
+}
+.content4 .box{
+    width:40px;
+    height:40px;
+    background:mediumaquamarine;
+    cursor: pointer;
+}
+.content4 .box:hover{
+    /* transition-property: transform opacity; */
+    /* transition-duration:.4s; */
+    transition: all .4s;
+    transform: rotate(45deg);
+    opacity: .3;
 }
 </style>
