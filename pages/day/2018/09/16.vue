@@ -20,10 +20,27 @@
             <h2>マウスオーバーすると0.4sかけて回転し不透明度を変更します。</h2>
             <div class="box"></div>
         </div>
+        <div class="content5">
+            <h2>どこかをクリックすると右横に400px分移動します。</h2>
+            <div class="movedbox"></div>
+            <div class="movedbox"></div>
+            <div class="movedbox"></div>
+        </div>
     </div>
 </template>
 
 <script>
+
+//即時関数
+(() => {
+    'use strict';
+    document.querySelector('body').addEventListener('click', () =>{
+        document.querySelectorAll('.movedbox').forEach((box) => {
+            box.classList.add('moved');
+        })
+    });
+})();
+
 export default{
     data(){
         return{
@@ -132,5 +149,25 @@ export default{
     transition: all .4s;
     transform: rotate(45deg);
     opacity: .3;
+}
+.content5{
+    margin-top:20px;
+}
+.content5 h2{
+    font-size:15px;
+    padding:5px;
+    color:#454545;
+    border-bottom:double 3px #454545;
+    width:50%;
+    margin-bottom:20px;
+}
+.content5 .movedbox{
+    width:40px;
+    height:40px;
+    background:royalblue;
+    cursor:pointer;
+}
+.moved{
+    transform: translate(400px, 0);
 }
 </style>
