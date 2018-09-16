@@ -7,7 +7,12 @@
             </div>
         </div>
         <div class="content2">
-            <h2>見出し</h2>
+            <h2>マウスオーバーすると左に45度回転します。</h2>
+            <div class="box">
+            </div>
+        </div>
+        <div class="content3">
+            <h2>マウスオーバーすると2倍に拡大します。</h2>
             <div class="box">
             </div>
         </div>
@@ -51,7 +56,7 @@ export default{
     cursor: pointer;
 }
 .content1 .box:hover{
-    /* 変形後のスタイル */
+    /* x,y軸分移動 */
     transform: translate(10px, 20px);
 }
 .content2{
@@ -74,6 +79,30 @@ export default{
     cursor: pointer;
 }
 .content2 .box:hover{
+    /* 45度回転 */
     transform: rotate(45deg);
+}
+.content3{
+    margin-top:20px;
+}
+.content3 h2{
+    font-size:15px;
+    width:50%;
+    padding:5px;
+    color:#454545;
+    background:#cef6f5;
+    box-shadow:0 0 0 5px #cef6f5;
+    border:dashed 2px skyblue;
+    margin-bottom:20px;
+}
+.content3 .box{
+    width:40px;
+    height:40px;
+    background:lightblue;
+    cursor: pointer;
+    margin:40px;
+}
+.content3 .box:hover{
+    transform: scale(2);
 }
 </style>
