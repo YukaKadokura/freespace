@@ -20,7 +20,7 @@
             <h2>マウスオーバーすると0.4sかけて回転し不透明度を変更します。</h2>
             <div class="box"></div>
         </div>
-        <div class="content5">
+        <div class="content5" v-on:click="addMovedClass()">
             <h2>どこかをクリックすると右横に400px分移動します。</h2>
             <div class="movedbox"></div>
             <div class="movedbox"></div>
@@ -31,20 +31,22 @@
 
 <script>
 
-//即時関数
-(() => {
-    'use strict';
-    document.querySelector('body').addEventListener('click', () =>{
-        document.querySelectorAll('.movedbox').forEach((box) => {
-            box.classList.add('moved');
-        })
-    });
-})();
-
 export default{
     data(){
         return{
             title:"20180916"
+        }
+    },
+    methods:{
+        addMovedClass(){
+            //即時関数
+            (() => {
+                'use strict';
+                    document.querySelectorAll('.movedbox').forEach((box) => {
+                        box.classList.add('moved');
+                    }
+                );
+            })();
         }
     }
 }
