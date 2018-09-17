@@ -7,6 +7,17 @@
                 {{ omikujiResult }}
             </div>
         </div>
+        <div class="content c2">
+            <h2>5秒を当てるゲームです。</h2>
+            <div class="fivegame">
+                <div id="target">5.000</div>
+                <div id="result">{{ resultTime }}</div>
+                <div class="buttons">
+                    <div id="start" v-on:click="gameStart()">Start</div>
+                    <div id="stop" v-on:click="gameStop()">Stop</div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -15,7 +26,9 @@ export default{
     data(){
         return{
             title:"20180917",
-            omikujiResult:"？"
+            omikujiResult:"？",
+            startTime:"",
+            resultTime:""
         }
     },
     methods:{
@@ -26,17 +39,22 @@ export default{
         },
         mousedownOmikuji(){
             (() => {
-                'use strict';
                 var omikuji = document.getElementById('omikuji');
                 omikuji.classList.add('pushed');
             })();
         },
         mouseupOmikuji(){
             (() => {
-                'use strict';
                 var omikuji = document.getElementById('omikuji');
                 omikuji.classList.remove('pushed');
             })();
+        },
+        gameStart(){
+            this.startTime = Date.now();
+            this.resultTime = "計測中";
+        },
+        gameStop(){
+            this.resultTime = (Date.now() - new Date(this.startTime))/1000;
         }
     }
 }
@@ -52,14 +70,14 @@ export default{
 .content{
     margin-top:20px;
 }
-.c1 h2{
+.content h2{
+    margin:10px 0 10px 0;
     font-size:15px;
     color:#454545;
     padding:5px;
     border-left:solid 3px #454545;
 }
 #omikuji{
-    margin:30px 0 0;
     width:200px;
     height:200px;
     border-radius:50%;
@@ -82,5 +100,34 @@ export default{
     background:yellow;
     height:190px;
     box-shadow: 0 4px 0 #D1483E;
+}
+.fivegame{
+    font-family: 'Courier New', sans-serif;
+    width:300px;
+    text-align:center;
+    font-weight:bold;
+}
+#target, #result{
+    font-size:32px;
+    margin-bottom:15px;
+    background:#ccc;
+    height:60px;
+    line-height:60px;
+}
+#start{
+    float:left;
+}
+#stop{
+    float:right;
+} 
+#start, #stop{
+    cursor:pointer;
+    font-size:18px;
+    width:145px;
+    background:#eee;
+
+    height:40px;
+    line-height:40px;
+    box-shadow:0 6px 0 #ccc;
 }
 </style>
