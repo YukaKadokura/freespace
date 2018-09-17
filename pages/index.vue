@@ -7,6 +7,7 @@
     <div class="content">
       <div class="day">
         <p>201809</p>
+        <v-btn small nuxt-link to="/day/2018/09/17">20180917</v-btn>
         <v-btn small nuxt-link to="/day/2018/09/16">20180916</v-btn>
         <v-btn small nuxt-link to="/day/2018/09/15">20180915</v-btn>
         <v-btn small nuxt-link to="/day/2018/09/13">20180913</v-btn>
