@@ -3,8 +3,8 @@
         <h1>{{ title }}</h1>
         <div class="content c1">
             <h2>おみくじ</h2>
-            <div class="omikuji">
-                ？
+            <div class="omikuji" v-on:click="getOmikujiResult()">
+                {{ omikujiResult }}
             </div>
         </div>
     </div>
@@ -14,7 +14,15 @@
 export default{
     data(){
         return{
-            title:"20180917"
+            title:"20180917",
+            omikujiResult:"？"
+        }
+    },
+    methods:{
+        getOmikujiResult(){
+            var results = [ "凶", "吉", "中吉", "大吉" ];
+            var num = Math.floor(Math.random() * 4);
+            this.omikujiResult = results[num];
         }
     }
 }
