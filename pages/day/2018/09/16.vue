@@ -42,9 +42,9 @@ export default{
             //即時関数
             (() => {
                 'use strict';
-                    document.querySelectorAll('.movedbox').forEach((box) => {
-                        box.classList.add('moved');
-                    }
+                document.querySelectorAll('.movedbox').forEach((box) => {
+                    box.classList.add('moved');
+                }
                 );
             })();
         }
